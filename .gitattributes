@@ -1,0 +1,24 @@
+# Auto-detect text files and normalise line endings on commit.
+* text=auto eol=lf
+
+# Explicitly mark text files.
+*.ts   text eol=lf
+*.tsx  text eol=lf
+*.js   text eol=lf
+*.jsx  text eol=lf
+*.json text eol=lf
+*.css  text eol=lf
+*.html text eol=lf
+*.md   text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+
+# Treat binary files as binary.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.svg  text eol=lf
+*.woff binary
+*.woff2 binary
