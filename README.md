@@ -65,11 +65,12 @@ json-studio/
 │   └── utils/              # download.ts
 ├── tests/                  # parser, formatter, minifier, editor, download
 ├── docs/architecture.md
+├── ROADMAP.md
 ├── .github/workflows/ci.yml
 └── ...
 ```
 
-See [`docs/architecture.md`](docs/architecture.md) for design notes.
+See [`docs/architecture.md`](docs/architecture.md) for design notes and [`ROADMAP.md`](ROADMAP.md) for the full version plan.
 
 ## Testing
 
@@ -87,15 +88,14 @@ See [`SECURITY.md`](SECURITY.md). In short: no backend, no network calls, no `in
 
 **v1.0 (current):** format, validate, minify, copy, download, sample, clear, error feedback, responsive UI, tests, CI.
 
-**Planned:**
-- JSON tree viewer
-- JSON diff / compare
-- JSON to CSV
-- Sort keys
-- Search within JSON
-- Keyboard shortcuts
-- JSON statistics
-- Dark mode
+**Coming next:**
+- **v1.1** — UX polish: drag-and-drop files, line numbers, accessibility audit, i18n (EN + AR)
+- **v1.2** — Developer productivity: CodeMirror 6, JSON tree viewer, keyboard shortcuts
+- **v1.3** — Compare & convert: JSON diff, CSV/YAML/TypeScript export
+- **v1.4** — Power tools: JSONPath queries, JSON Schema validation, statistics
+- **v2.0** — Beyond JSON: multi-format studio, workspace tabs, plugin system, dark mode
+
+See the full [`ROADMAP.md`](ROADMAP.md) for details.
 
 ## Deployment
 
