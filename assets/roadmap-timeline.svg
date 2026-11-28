@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" width="920" height="520" font-family="-apple-system, 'Segoe UI', Roboto, sans-serif" text-rendering="geometricPrecision">
+  <defs>
+    <style>
+      .title { font-size: 18px; font-weight: 600; fill: #171717; }
+      .subtitle { font-size: 11px; fill: #6B7280; }
+      .ver { font-size: 13px; font-weight: 700; font-family: ui-monospace, Menlo, monospace; }
+      .ver-name { font-size: 11px; font-weight: 500; fill: #171717; }
+      .ver-target { font-size: 9px; fill: #6B7280; }
+      .item { font-size: 10px; fill: #374151; }
+      .item-muted { font-size: 9px; fill: #9CA3AF; }
+      .legend { font-size: 10px; fill: #6B7280; }
+    </style>
+  </defs>
+
+  <text x="460" y="30" text-anchor="middle" class="title">JSON Studio — Release Timeline</text>
+  <text x="460" y="48" text-anchor="middle" class="subtitle">From v1.0 MVP to v2.0 multi-format studio</text>
+
+  <line x1="80" y1="100" x2="840" y2="100" stroke="#E5E5E5" stroke-width="2"/>
+
+  <g>
+    <circle cx="100" cy="100" r="14" fill="#16A34A"/>
+    <text x="100" y="105" text-anchor="middle" font-size="10" font-weight="700" fill="#FFFFFF">✓</text>
+    <text x="100" y="135" text-anchor="middle" class="ver" fill="#16A34A">v1.0</text>
+    <text x="100" y="150" text-anchor="middle" class="ver-name">MVP</text>
+    <text x="100" y="164" text-anchor="middle" class="ver-target">Released · Nov 2026</text>
+    <text x="100" y="190" text-anchor="middle" class="item">format</text>
+    <text x="100" y="204" text-anchor="middle" class="item">validate</text>
+    <text x="100" y="218" text-anchor="middle" class="item">minify</text>
+    <text x="100" y="232" text-anchor="middle" class="item">copy / download</text>
+    <text x="100" y="246" text-anchor="middle" class="item">64 tests</text>
+    <text x="100" y="260" text-anchor="middle" class="item">CI pipeline</text>
+  </g>
+
+  <g>
+    <circle cx="240" cy="100" r="14" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <text x="240" y="105" text-anchor="middle" font-size="10" font-weight="700" fill="#2563EB">→</text>
+    <text x="240" y="135" text-anchor="middle" class="ver" fill="#2563EB">v1.1</text>
+    <text x="240" y="150" text-anchor="middle" class="ver-name">UX Polish</text>
+    <text x="240" y="164" text-anchor="middle" class="ver-target">Q1 2027</text>
+    <text x="240" y="190" text-anchor="middle" class="item">drag &amp; drop files</text>
+    <text x="240" y="204" text-anchor="middle" class="item">line numbers</text>
+    <text x="240" y="218" text-anchor="middle" class="item">error caret</text>
+    <text x="240" y="232" text-anchor="middle" class="item">WCAG AA audit</text>
+    <text x="240" y="246" text-anchor="middle" class="item">i18n (EN + AR)</text>
+    <text x="240" y="260" text-anchor="middle" class="item">RTL support</text>
+  </g>
+
+  <g>
+    <circle cx="380" cy="100" r="14" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <text x="380" y="105" text-anchor="middle" font-size="10" font-weight="700" fill="#2563EB">→</text>
+    <text x="380" y="135" text-anchor="middle" class="ver" fill="#2563EB">v1.2</text>
+    <text x="380" y="150" text-anchor="middle" class="ver-name">Dev Productivity</text>
+    <text x="380" y="164" text-anchor="middle" class="ver-target">Q2 2027</text>
+    <text x="380" y="190" text-anchor="middle" class="item">CodeMirror 6</text>
+    <text x="380" y="204" text-anchor="middle" class="item">syntax highlight</text>
+    <text x="380" y="218" text-anchor="middle" class="item">bracket matching</text>
+    <text x="380" y="232" text-anchor="middle" class="item">tree viewer</text>
+    <text x="380" y="246" text-anchor="middle" class="item">JSON pointer</text>
+    <text x="380" y="260" text-anchor="middle" class="item">keyboard shortcuts</text>
+  </g>
+
+  <g>
+    <circle cx="520" cy="100" r="14" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <text x="520" y="105" text-anchor="middle" font-size="10" font-weight="700" fill="#2563EB">→</text>
+    <text x="520" y="135" text-anchor="middle" class="ver" fill="#2563EB">v1.3</text>
+    <text x="520" y="150" text-anchor="middle" class="ver-name">Compare &amp; Convert</text>
+    <text x="520" y="164" text-anchor="middle" class="ver-target">Q2 2027</text>
+    <text x="520" y="190" text-anchor="middle" class="item">JSON diff</text>
+    <text x="520" y="204" text-anchor="middle" class="item">JSON → CSV</text>
+    <text x="520" y="218" text-anchor="middle" class="item">JSON → YAML</text>
+    <text x="520" y="232" text-anchor="middle" class="item">YAML → JSON</text>
+    <text x="520" y="246" text-anchor="middle" class="item">→ TypeScript types</text>
+    <text x="520" y="260" text-anchor="middle" class="item">diff summary</text>
+  </g>
+
+  <g>
+    <circle cx="660" cy="100" r="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="2" stroke-dasharray="3 2"/>
+    <text x="660" y="105" text-anchor="middle" font-size="10" font-weight="700" fill="#9CA3AF">?</text>
+    <text x="660" y="135" text-anchor="middle" class="ver" fill="#9CA3AF">v1.4</text>
+    <text x="660" y="150" text-anchor="middle" class="ver-name">Power Tools</text>
+    <text x="660" y="164" text-anchor="middle" class="ver-target">Q3 2027 · idea</text>
+    <text x="660" y="190" text-anchor="middle" class="item-muted">JSONPath</text>
+    <text x="660" y="204" text-anchor="middle" class="item-muted">JSON Schema</text>
+    <text x="660" y="218" text-anchor="middle" class="item-muted">sort keys</text>
+    <text x="660" y="232" text-anchor="middle" class="item-muted">flatten / unflatten</text>
+    <text x="660" y="246" text-anchor="middle" class="item-muted">pick / omit</text>
+    <text x="660" y="260" text-anchor="middle" class="item-muted">statistics</text>
+  </g>
+
+  <g>
+    <circle cx="800" cy="100" r="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="2" stroke-dasharray="3 2"/>
+    <text x="800" y="105" text-anchor="middle" font-size="10" font-weight="700" fill="#9CA3AF">?</text>
+    <text x="800" y="135" text-anchor="middle" class="ver" fill="#9CA3AF">v2.0</text>
+    <text x="800" y="150" text-anchor="middle" class="ver-name">Beyond JSON</text>
+    <text x="800" y="164" text-anchor="middle" class="ver-target">Q4 2027 · idea</text>
+    <text x="800" y="190" text-anchor="middle" class="item-muted">Data Studio</text>
+    <text x="800" y="204" text-anchor="middle" class="item-muted">XML / TOML</text>
+    <text x="800" y="218" text-anchor="middle" class="item-muted">CSV ↔ JSON</text>
+    <text x="800" y="232" text-anchor="middle" class="item-muted">workspace tabs</text>
+    <text x="800" y="246" text-anchor="middle" class="item-muted">plugin system</text>
+    <text x="800" y="260" text-anchor="middle" class="item-muted">dark mode</text>
+  </g>
+
+  <g>
+    <rect x="60" y="320" width="800" height="180" rx="10" fill="#F9FAFB" stroke="#E5E5E5"/>
+    <text x="80" y="345" font-size="13" font-weight="600" fill="#171717">Principles that don't move between versions</text>
+    <text x="80" y="375" font-size="11" font-weight="600" fill="#2563EB">1 · Privacy first</text>
+    <text x="80" y="392" class="item">No backend. No network calls for data. No analytics. Ever.</text>
+    <text x="80" y="415" font-size="11" font-weight="600" fill="#2563EB">2 · Client-side only</text>
+    <text x="80" y="432" class="item">The app stays a static bundle. No server runtime.</text>
+    <text x="490" y="375" font-size="11" font-weight="600" fill="#2563EB">3 · No tracking</text>
+    <text x="490" y="392" class="item">No cookies, no fingerprinting, no third-party scripts.</text>
+    <text x="490" y="415" font-size="11" font-weight="600" fill="#2563EB">4 · Accessibility is a feature</text>
+    <text x="490" y="432" class="item">Every release must pass keyboard + screen reader checks.</text>
+    <text x="80" y="462" font-size="11" font-weight="600" fill="#2563EB">5 · Small bundle</text>
+    <text x="80" y="479" class="item">Doubling the bundle size requires justification.</text>
+    <text x="490" y="462" font-size="11" font-weight="600" fill="#2563EB">6 · Tests are mandatory</text>
+    <text x="490" y="479" class="item">Every new code path ships with tests.</text>
+  </g>
+
+  <g>
+    <circle cx="80" cy="500" r="6" fill="#16A34A"/>
+    <text x="92" y="504" class="legend">released</text>
+    <circle cx="180" cy="500" r="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <text x="192" y="504" class="legend">planned</text>
+    <circle cx="280" cy="500" r="6" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="2" stroke-dasharray="3 2"/>
+    <text x="292" y="504" class="legend">idea</text>
+  </g>
+</svg>
