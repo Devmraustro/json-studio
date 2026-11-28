@@ -1,6 +1,24 @@
-# JSON Studio
+<p align="center">
+  <img src="assets/badge.svg" alt="JSON Studio" width="80" height="80" />
+</p>
 
-A lightweight, privacy-focused JSON toolkit for developers. Format, validate, minify, and export JSON directly in your browser — no backend, no tracking, no account.
+<h1 align="center">JSON Studio</h1>
+
+<p align="center">
+  A lightweight, privacy-focused JSON toolkit for developers.<br/>
+  Format, validate, minify, and export JSON directly in your browser — no backend, no tracking, no account.
+</p>
+
+<p align="center">
+  <a href="https://github.com/Devmraustro/json-studio/blob/main/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-2563EB.svg" /></a>
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-strict-3178C6.svg" />
+  <img alt="Tests" src="https://img.shields.io/badge/tests-64%20passing-16A34A.svg" />
+  <img alt="Bundle" src="https://img.shields.io/badge/bundle-48.7%20kB%20gzip-171717.svg" />
+</p>
+
+---
+
+![UI preview](assets/ui-preview.svg)
 
 ## Features
 
@@ -22,6 +40,12 @@ Everything runs in your browser. There is no backend, no network call for proces
 ## Tech Stack
 
 React 18, TypeScript 5 (strict), Vite 5, Vitest 2, React Testing Library, ESLint, plain CSS.
+
+## Architecture
+
+![Architecture](assets/architecture.svg)
+
+Four layers, dependencies flowing downward only. See [`docs/architecture.md`](docs/architecture.md) for the full design notes.
 
 ## Getting Started
 
@@ -54,19 +78,19 @@ Open the URL printed by Vite (default `http://localhost:5173`).
 
 ```
 json-studio/
+├── assets/                # logo, badge, diagrams
 ├── public/
 │   └── favicon.svg
 ├── src/
-│   ├── app/                # App.tsx, main.tsx
-│   ├── components/         # Editor, Toolbar, StatusBar, Settings
-│   ├── features/json/      # parser, formatter, minifier, types
-│   ├── hooks/              # useJsonEditor
-│   ├── styles/             # global.css
-│   └── utils/              # download.ts
-├── tests/                  # parser, formatter, minifier, editor, download
+│   ├── app/               # App.tsx, main.tsx
+│   ├── components/        # Editor, Toolbar, StatusBar, Settings
+│   ├── features/json/     # parser, formatter, minifier, types
+│   ├── hooks/             # useJsonEditor
+│   ├── styles/            # global.css
+│   └── utils/             # download.ts
+├── tests/                 # parser, formatter, minifier, editor, download
 ├── docs/architecture.md
 ├── ROADMAP.md
-├── .github/workflows/ci.yml
 └── ...
 ```
 
@@ -85,6 +109,8 @@ Covers the parser (valid, invalid, primitives, nested, unicode, escaped), format
 See [`SECURITY.md`](SECURITY.md). In short: no backend, no network calls, no `innerHTML`, no analytics, no committed secrets.
 
 ## Roadmap
+
+![Release timeline](assets/roadmap-timeline.svg)
 
 **v1.0 (current):** format, validate, minify, copy, download, sample, clear, error feedback, responsive UI, tests, CI.
 
