@@ -1,225 +1,154 @@
 # Roadmap
 
-This document tracks the past, current, and future development of JSON Studio. Versions follow [Semantic Versioning](https://semver.org/).
+Where the project is, where it's going, and what it won't become.
 
-Status legend: ✅ Done · 🚧 In Progress · 📋 Planned · 💡 Idea
+![Release timeline](assets/roadmap-timeline.png)
 
----
-
-## v1.0 — MVP (Current Release)
-
-**Status:** ✅ Released · **Date:** 2026-11-25 · **Tag:** `v1.0.0`
-
-### Core Engine
-- ✅ `parseJson` with structured `ParseResult` (ok / data / error / line / column)
-- ✅ `formatJson` with configurable indentation (2 / 4 spaces)
-- ✅ `minifyJson` with whitespace removal
-- ✅ `isValidJson` convenience predicate
-- ✅ Strict RFC 8259 compliance (rejects comments, trailing commas, single quotes)
-
-### User Interface
-- ✅ Two-pane editor (input / output) with controlled textareas
-- ✅ Toolbar: Format, Minify, Validate, Sample, Clear
-- ✅ Settings: segmented indentation control (2 / 4 spaces)
-- ✅ StatusBar: live status, error message with line/column, byte metrics
-- ✅ Copy to clipboard (with `execCommand` fallback)
-- ✅ Download as `.json` file
-- ✅ Sample JSON loader
-- ✅ Responsive layout (desktop + mobile)
-
-### Design System
-- ✅ Professional Minimalist palette (white / grey / blue accent)
-- ✅ CSS custom properties for all tokens
-- ✅ Mono font for code, sans-serif for UI
-- ✅ Focus rings for accessibility
-- ✅ Light mode
-
-### Engineering
-- ✅ React 18 + TypeScript 5 (strict mode + `noUncheckedIndexedAccess`)
-- ✅ Vite 5 build setup
-- ✅ Vitest 2 + React Testing Library (64 tests)
-- ✅ ESLint with zero warnings
-- ✅ GitHub Actions CI (lint → typecheck → test → build)
-- ✅ MIT license, README, CONTRIBUTING, SECURITY, architecture docs
-
-### Privacy & Security
-- ✅ 100% client-side processing
-- ✅ No backend, no network calls, no analytics
-- ✅ No `localStorage` / `IndexedDB` / cookies
-- ✅ React-escaped rendering (no `innerHTML`)
+![Release timeline (SVG)](assets/roadmap-timeline.svg)
 
 ---
 
-## v1.1 — UX Polish & Resilience
+## Where we are now
 
-**Status:** 📋 Planned · **Target:** Q1 2027
+### v1.0 — shipped on Nov 25, 2026
 
-### Editor Improvements
-- 📋 Drag-and-drop `.json` file onto the input pane
-- 📋 Paste from clipboard directly (auto-detect large content)
-- 📋 Line numbers in the input pane
-- 📋 Word-wrap toggle for long lines
-- 📋 Tab key inserts spaces inside the textarea (instead of changing focus)
+The MVP is done. The app does what the README says it does, the tests pass, and the CI runs on every push.
 
-### Error Handling
-- 📋 Highlight the offending character with a red caret in the input
-- 📋 Show a snippet of the broken line in the status bar
-- 📋 Detect and report duplicate object keys as a warning
+What's in:
 
-### Accessibility
-- 📋 Full keyboard navigation (Tab order, focus visible)
-- 📋 ARIA live region announcements on status change
-- 📋 High-contrast mode audit (WCAG AA)
-- 📋 Screen reader testing (NVDA + VoiceOver)
+- Format, minify, validate — all on a strict RFC 8259 parser
+- 2 or 4 space indentation, picked from a segmented control
+- Copy and download, with a fallback for the clipboard API
+- Sample data button, clear button
+- Error messages with line and column when the engine gives them
+- A status bar with byte counts
+- Responsive layout (collapses to one column on mobile)
+- 64 tests covering the engine and the editor
+- ESLint clean, TypeScript strict, CI green
 
-### Internationalisation
-- 📋 Extract all user-facing strings into a single locale file
-- 📋 English + Arabic initial locales
-- 📋 RTL layout support for Arabic
+What's not in, on purpose:
 
----
-
-## v1.2 — Developer Productivity
-
-**Status:** 📋 Planned · **Target:** Q2 2027
-
-### Syntax Highlighting
-- 📋 Replace plain textarea with [CodeMirror 6](https://codemirror.net/)
-- 📋 JSON syntax highlighting (keys, strings, numbers, booleans, null)
-- 📋 Bracket matching and auto-closing
-- 📋 Search inside the editor (Ctrl+F)
-
-### JSON Tree Viewer
-- 📋 Collapsible tree view alongside the text output
-- 📋 Click a node to highlight its source range
-- 📋 Path bar showing the current selection's JSON pointer (e.g. `$.users[0].name`)
-- 📋 "Copy path" action on each node
-
-### Keyboard Shortcuts
-- 📋 `Ctrl+Shift+F` — Format
-- 📋 `Ctrl+Shift+M` — Minify
-- 📋 `Ctrl+Shift+V` — Validate
-- 📋 `Ctrl+Shift+S` — Sample
-- 📋 `Ctrl+Shift+C` — Copy output
-- 📋 `Ctrl+Shift+D` — Download
-- 📋 `Ctrl+Shift+K` — Clear
-- 📋 Shortcut cheatsheet modal (`?` to open)
+- No backend, no network calls, no analytics
+- No persistence — close the tab, the data is gone
+- No syntax highlighting (planned for v1.2)
+- No tree view (planned for v1.2)
+- No dark mode (planned for v2.0)
 
 ---
 
-## v1.3 — Compare & Convert
+## What's next
 
-**Status:** 📋 Planned · **Target:** Q2 2027
+### v1.1 — UX polish
 
-### JSON Diff
-- 📋 Side-by-side diff view (left vs right JSON)
-- 📋 Inline additions / deletions / modifications highlighted
-- 📋 Path-level summary: "5 keys added, 2 changed, 1 removed"
-- 📋 Ignore-key option (e.g. skip `timestamp` fields)
+Target: Q1 2027
 
-### JSON → CSV
-- 📋 Flatten arrays of homogeneous objects into a CSV table
-- 📋 Handle nested objects with dot-notation headers (`address.city`)
-- 📋 Preview before download
-- 📋 Configurable delimiter (comma / semicolon / tab)
+The MVP works, but it feels like a textarea. The next release makes it feel like a tool.
 
-### JSON → YAML / YAML → JSON
-- 📋 Two-way conversion using a bundled parser
-- 📋 Preserve key order (no sorting)
+- Drag a `.json` file onto the input pane instead of pasting
+- Line numbers in the input
+- When parsing fails, show a snippet of the broken line, not just the column number
+- Tab key inserts spaces (instead of stealing focus)
+- Word-wrap toggle for long lines
+- Detect duplicate object keys and warn
+- Full keyboard navigation, visible focus, ARIA live region on status
+- WCAG AA audit with NVDA and VoiceOver
+- Pull all UI strings into a locale file, ship English and Arabic, support RTL
 
-### JSON → TypeScript Types
-- 📋 Generate `interface` declarations from a JSON sample
-- 📋 Optional `type` vs `interface` output
-- 📋 Handle union types when array items differ
+### v1.2 — Developer productivity
 
----
+Target: Q2 2027
 
-## v1.4 — Power Tools
+Where the editor stops being a textarea.
 
-**Status:** 💡 Idea · **Target:** Q3 2027
+- Replace the textarea with CodeMirror 6
+- JSON syntax highlighting (keys, strings, numbers, booleans, null)
+- Bracket matching and auto-closing
+- In-editor search (Ctrl+F)
+- A collapsible tree view next to the text output
+- Click a node in the tree, see its source range highlighted
+- Path bar showing the JSON pointer of the current selection (`$.users[0].name`)
+- Copy-path action on every node
+- Keyboard shortcuts: `Ctrl+Shift+F` format, `Ctrl+Shift+M` minify, `Ctrl+Shift+V` validate, `Ctrl+Shift+S` sample, `Ctrl+Shift+C` copy, `Ctrl+Shift+D` download, `Ctrl+Shift+K` clear
+- `?` opens a shortcut cheatsheet
 
-### JSON Path Query
-- 💡 Execute [JSONPath](https://goessner.net/articles/JsonPath/) queries against the input
-- 💡 Live result preview as you type the query
-- 💡 Highlight matched nodes in the tree viewer
-- 💡 Save recent queries in session memory
+### v1.3 — Compare and convert
 
-### JSON Schema Validation
-- 💡 Paste or upload a JSON Schema (draft 2020-12)
-- 💡 Validate the input against the schema
-- 💡 Report all violations with paths and messages
-- 💡 Generate a stub schema from a sample JSON
+Target: Q2 2027
 
-### Sort & Transform
-- 💡 Sort object keys alphabetically (recursive option)
-- 💡 Flatten nested objects into dot-notation
-- 💡 Unflatten dot-notation back into nested objects
-- 💡 Pick / omit keys by name
-- 💡 Convert all string values to a specific encoding (base64, URL)
+Two big things people ask for: diffing two JSON documents, and getting JSON into other formats.
 
-### JSON Statistics
-- 💡 Total bytes, keys, array items, max depth
-- 💡 Key frequency table (which keys appear most often)
-- 💡 Type distribution chart (objects / arrays / strings / numbers / null)
+- Side-by-side diff view
+- Inline additions, deletions, and modifications highlighted
+- Path-level summary: "5 keys added, 2 changed, 1 removed"
+- Ignore-key option (skip `timestamp`, `updatedAt`, etc.)
+- JSON to CSV for arrays of homogeneous objects
+- Nested objects flattened with dot-notation headers (`address.city`)
+- CSV preview before download
+- Configurable delimiter (comma, semicolon, tab)
+- JSON to YAML and back, key order preserved
+- JSON to TypeScript `interface` declarations, with union types when array items differ
 
----
+### v1.4 — Power tools (idea, not committed)
 
-## v2.0 — Beyond JSON
+Target: Q3 2027
 
-**Status:** 💡 Idea · **Target:** Q4 2027
+This version exists on the roadmap to gauge interest. None of it is built, and none of it is promised.
 
-### Multi-Format Studio
-- 💡 Rebrand as **Data Studio** — one toolkit for multiple formats
-- 💡 XML formatter + validator
-- 💡 TOML reader
-- 💡 CSV ↔ JSON two-way converter
-- 💡 Markdown table ↔ JSON
+- JSONPath queries against the input, live preview as you type
+- Highlight matched nodes in the tree viewer
+- JSON Schema validation (draft 2020-12)
+- Generate a stub schema from a sample
+- Sort object keys alphabetically, with a recursive option
+- Flatten nested objects into dot-notation, and unflatten back
+- Pick or omit keys by name
+- Encode all string values (base64, URL)
+- Statistics: bytes, keys, array items, max depth, key frequency, type distribution
 
-### Workspace
-- 💡 Multiple tabs (each tab = one document)
-- 💡 Session restore (offer, not force — privacy-first)
-- 💡 Export workspace as a `.zip` of files
-- 💡 Optional passphrase-encrypted local storage (off by default)
+### v2.0 — Beyond JSON (idea, not committed)
 
-### Plugin System
-- 💡 User-defined transforms via a small JS sandbox
-- 💡 Plugin manifest format (`plugin.json`)
-- 💡 Community plugin registry (static, no backend)
+Target: Q4 2027
 
-### Dark Mode
-- 💡 System-preference-driven (`prefers-color-scheme`)
-- 💡 Manual toggle with persistence (off by default — privacy)
-- 💡 Token overrides only; no component changes
+If v1.x goes well, the natural next step is to handle more than JSON. The name would change to **Data Studio**, and the JSON-specific tools would become one tab among many.
 
----
-
-## Long-Term Principles (Never Compromise)
-
-These principles guide every version. They are non-negotiable:
-
-1. **Privacy first.** No backend, no network calls for data processing, no analytics. Ever.
-2. **Client-side only.** The app must remain a static bundle. No server runtime.
-3. **No tracking.** No cookies, no fingerprinting, no third-party scripts.
-4. **Accessibility is a feature.** Every release must pass keyboard + screen reader checks.
-5. **Small bundle.** Adding a feature that doubles the bundle size requires justification.
-6. **Tests are mandatory.** Every new code path ships with tests.
-7. **MIT license.** The project stays permissive and open-source.
-8. **No accounts.** The app never asks for sign-up or login.
+- XML formatter and validator
+- TOML reader
+- CSV and JSON, two-way
+- Markdown table and JSON, two-way
+- Multiple tabs (one document per tab)
+- Optional session restore, off by default (privacy)
+- Export the workspace as a `.zip`
+- Optional passphrase-encrypted local storage, off by default
+- Plugin system: user-defined transforms in a small JS sandbox
+- Plugin manifest format (`plugin.json`)
+- Community plugin registry, static, no backend
+- Dark mode, system-preference-driven, manual toggle, token overrides only
 
 ---
 
-## How to Contribute to the Roadmap
+## What this project won't become
 
-- Open an issue with the `roadmap` label to propose a new feature.
-- Up-vote existing issues with 👍 — we use reactions to gauge demand.
-- Pull requests that implement a `📋 Planned` item are very welcome. Please link the issue and reference this document.
+A few things are off the table, regardless of how many people ask:
+
+1. **No backend.** The app stays a static bundle. If a feature needs a server, the feature doesn't ship.
+2. **No tracking.** No analytics, no cookies, no fingerprinting, no third-party scripts.
+3. **No accounts.** No sign-up, no login, no user database. Ever.
+4. **No large dependencies without justification.** Adding a 200 KB library for a minor convenience is not a trade we'll make.
+5. **No breaking changes inside v1.x.** Save formats, keyboard shortcuts, and the public API stay stable until v2.0.
 
 ---
 
-## Versioning Policy
+## How to influence the roadmap
+
+- Open an issue with the `roadmap` label to propose a feature.
+- Add a 👍 to existing issues. We use reactions to read demand.
+- If you want to implement something from the "planned" list above, comment on the relevant issue first so we can align on the approach before you write code.
+
+---
+
+## Versioning
 
 - **Patch** (`1.0.x`): bug fixes, no behaviour change.
 - **Minor** (`1.x.0`): new features, backwards-compatible.
 - **Major** (`x.0.0`): breaking changes. Reserved for v2.0 and beyond.
 
-Pre-release versions use the `-alpha.N` / `-beta.N` / `-rc.N` suffixes.
+Pre-releases use `-alpha.N`, `-beta.N`, `-rc.N` suffixes.
