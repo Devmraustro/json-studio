@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" font-family="-apple-system, 'Segoe UI', Roboto, sans-serif" text-rendering="geometricPrecision">
+  <rect x="0" y="0" width="900" height="520" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="900" height="36" fill="#F5F5F5"/>
+  <circle cx="20" cy="18" r="5" fill="#FF5F57"/>
+  <circle cx="38" cy="18" r="5" fill="#FEBC2E"/>
+  <circle cx="56" cy="18" r="5" fill="#28C840"/>
+  <rect x="180" y="10" width="540" height="16" rx="8" fill="#FFFFFF" stroke="#E5E5E5"/>
+  <text x="450" y="22" text-anchor="middle" font-size="10" fill="#6B7280" font-family="ui-monospace, Menlo, monospace">https://devmraustro.github.io/json-studio</text>
+  <rect x="40" y="56" width="36" height="36" rx="8" fill="#2563EB"/>
+  <text x="58" y="80" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF" font-family="ui-monospace, Menlo, monospace">{ }</text>
+  <text x="88" y="74" font-size="16" font-weight="600" fill="#171717">JSON Studio</text>
+  <text x="88" y="88" font-size="10" fill="#6B7280">lightweight, privacy-focused JSON toolkit</text>
+  <rect x="810" y="64" width="56" height="22" rx="6" fill="#FFFFFF" stroke="#E5E5E5"/>
+  <text x="838" y="79" text-anchor="middle" font-size="10" fill="#171717">GitHub</text>
+  <line x1="40" y1="106" x2="860" y2="106" stroke="#E5E5E5"/>
+  <rect x="40" y="124" width="70" height="28" rx="6" fill="#2563EB"/>
+  <text x="75" y="143" text-anchor="middle" font-size="11" font-weight="500" fill="#FFFFFF">Format</text>
+  <rect x="118" y="124" width="64" height="28" rx="6" fill="#FFFFFF" stroke="#E5E5E5"/>
+  <text x="150" y="143" text-anchor="middle" font-size="11" font-weight="500" fill="#171717">Minify</text>
+  <rect x="190" y="124" width="68" height="28" rx="6" fill="#FFFFFF" stroke="#E5E5E5"/>
+  <text x="224" y="143" text-anchor="middle" font-size="11" font-weight="500" fill="#171717">Validate</text>
+  <line x1="270" y1="128" x2="270" y2="148" stroke="#E5E5E5"/>
+  <rect x="280" y="124" width="60" height="28" rx="6" fill="#FFFFFF" stroke="transparent"/>
+  <text x="310" y="143" text-anchor="middle" font-size="11" font-weight="500" fill="#6B7280">Sample</text>
+  <rect x="348" y="124" width="50" height="28" rx="6" fill="#FFFFFF" stroke="transparent"/>
+  <text x="373" y="143" text-anchor="middle" font-size="11" font-weight="500" fill="#6B7280">Clear</text>
+  <text x="780" y="143" text-anchor="end" font-size="9" fill="#6B7280" letter-spacing="0.5">INDENTATION</text>
+  <rect x="790" y="124" width="32" height="28" rx="0" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="806" y="143" text-anchor="middle" font-size="10" font-weight="500" fill="#2563EB">2</text>
+  <rect x="822" y="124" width="32" height="28" rx="0" fill="#FFFFFF" stroke="#E5E5E5"/>
+  <text x="838" y="143" text-anchor="middle" font-size="10" font-weight="500" fill="#6B7280">4</text>
+  <text x="40" y="180" font-size="10" font-weight="600" fill="#6B7280" letter-spacing="0.5">INPUT</text>
+  <text x="100" y="180" font-size="10" fill="#9CA3AF">paste JSON here</text>
+  <rect x="40" y="188" width="400" height="240" rx="8" fill="#FFFFFF" stroke="#E5E5E5"/>
+  <g font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#171717">
+    <text x="56" y="212">{"name":"JSON Studio","version":"1.0</text>
+    <text x="56" y="228">","features":["format","validate","m</text>
+    <text x="56" y="244">inify"],"author":{"name":"Mr Austro"</text>
+    <text x="56" y="260">,"role":"Open-source developer"},</text>
+    <text x="56" y="276">"stats":{"stars":0,"openSource":tru</text>
+    <text x="56" y="292">e},"tags":["developer-tools","json"</text>
+    <text x="56" y="308">,"react"]}</text>
+  </g>
+  <text x="460" y="180" font-size="10" font-weight="600" fill="#6B7280" letter-spacing="0.5">OUTPUT</text>
+  <rect x="700" y="172" width="50" height="20" rx="4" fill="#FFFFFF" stroke="#E5E5E5"/>
+  <text x="725" y="186" text-anchor="middle" font-size="9" fill="#171717">Copy</text>
+  <rect x="755" y="172" width="65" height="20" rx="4" fill="#2563EB"/>
+  <text x="787" y="186" text-anchor="middle" font-size="9" fill="#FFFFFF">Download</text>
+  <rect x="460" y="188" width="400" height="240" rx="8" fill="#F5F5F5" stroke="#16A34A" stroke-width="1.5"/>
+  <g font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#171717">
+    <text x="476" y="212">{</text>
+    <text x="476" y="228" fill="#2563EB">  "name"</text><text x="540" y="228">: </text><text x="558" y="228" fill="#16A34A">"JSON Studio"</text><text x="644" y="228">,</text>
+    <text x="476" y="244" fill="#2563EB">  "version"</text><text x="540" y="244">: </text><text x="558" y="244" fill="#16A34A">"1.0.0"</text><text x="612" y="244">,</text>
+    <text x="476" y="260" fill="#2563EB">  "features"</text><text x="548" y="260">: [</text>
+    <text x="476" y="276" fill="#16A34A">    "format"</text><text x="540" y="276">,</text>
+    <text x="476" y="292" fill="#16A34A">    "validate"</text><text x="548" y="292">,</text>
+    <text x="476" y="308" fill="#16A34A">    "minify"</text>
+    <text x="476" y="324">  ],</text>
+    <text x="476" y="340">  ...</text>
+    <text x="476" y="396">}</text>
+  </g>
+  <rect x="40" y="448" width="820" height="40" rx="8" fill="#F0FDF4" stroke="#16A34A"/>
+  <circle cx="60" cy="468" r="5" fill="#16A34A"/>
+  <text x="74" y="473" font-size="11" fill="#16A34A" font-weight="500">Formatted successfully.</text>
+  <text x="780" y="473" font-size="10" fill="#6B7280" font-family="ui-monospace, Menlo, monospace">in: 156 · out: 384</text>
+  <text x="40" y="510" font-size="10" fill="#9CA3AF">Client-side only — your data never leaves the browser.</text>
+  <text x="860" y="510" text-anchor="end" font-size="10" fill="#9CA3AF">MIT License · v1.0.0</text>
+</svg>
